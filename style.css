@@ -11,12 +11,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 21px 60px;
     background-color: #1a1a1a;
 }
 .header-logo {
     width: 170px;
-    height: 50px;
+    height: 55px;
 }
 
 .header-logo img {
