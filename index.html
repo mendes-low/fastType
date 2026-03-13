@@ -34,7 +34,7 @@
                             <button type="button"  aria-pressed="false">words</button>
                             <button type="button"  aria-pressed="false">quote</button>
                         </fieldset>
-
+                        
                         <fieldset>
                             <button type="button"  aria-pressed="false">15</button>
                             <button type="button"  aria-pressed="true">30</button> <button type="button"  aria-pressed="true">time</button>
@@ -42,32 +42,60 @@
                             <button type="button"  aria-pressed="false">120</button>
                         </fieldset>
                     </div>
-
+                    
                     <!-- Рабия здесь должен быть сам тест , слова из JavaScript должы прогружаться здесь (Aria-hidden)  -->
-
-                    <section class="typing test">
+                    
+                    <section id="typing test">
                         <output id="timer">30</output>
-
+                        
                         <div id="words-wrapper">
                             <label for="hidden-input" class="lable_input">Type here</label>
                             <input 
-                                type="text"
-                                id="hidden-input"
-                                autocomplete="off"
-                                autocorrect="off"
-                                autocapitalize="off"
-                                spellcheck="false">
+                            type="text"
+                            id="hidden-input"
+                            autocomplete="off"
+                            autocorrect="off"
+                            autocapitalize="off"
+                            spellcheck="false">
                         </div>
                     </section>
+                    
+                    <section id="result">
+                        <dl>
+                            <div id="WPM">
+                                <dt>WPM</dt>
+                                <dd id="res-wpm">-</dd>
+                            </div>
+                            <div id="Accuracy">
+                                <dt>Accuracy</dt>
+                                <dd id="res-acc">-</dd>
+                            </div>
+                            <div id="Characters">
+                                <dt>Characters</dt>
+                                <dd id="res-chars">-</dd>
+                            </div>
+                            <div id="time">
+                                <dt>Time</dt>
+                                <dd id="res-time">-</dd>
+                            </div>
+                        </dl>
+                        
+                        <button type="button" id="restart-btn">restart test</button>
+                    </section>
                 </main>
-        </div>
+                
+                <footer>
+                    <p>press <kbd>Tab</kbd> to start</p>
+                </footer>
+            </div>
+                
+                
+                
 
-
-
-
-
-
-
+                
+                
+                
+                
         <script src="./main.js"></script>
     </body>
 </html>
