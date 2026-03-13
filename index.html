@@ -10,17 +10,13 @@
     <div class="container">
       <header id="header">
         <a class="LOGO">
-            <div class="logotype">
-
-                <img src="./assets/images/Logo.fast.type.png" alt="" />
-            </div>
+          <div class="logotype">
+            <img src="./assets/images/Logo.fast.type.png" alt="" />
+          </div>
         </a>
         <nav>
-
           <div class="main-items">
-
             <a class="icons" id="icon-keyboard" href="#"
-            
               ><img src="./assets/images/keyboard(1).png" alt=""
             /></a>
             <a class="icons" id="icon-liderboard" href="#"
@@ -32,39 +28,36 @@
           </div>
 
           <div class="register-items">
-
             <a class="icons" id="bell-icon" href="#">
               <img src="./assets/images/bell.png" alt="" />
             </a>
             <a class="icons" id="register-icon" href="#"
               ><img src="./assets/images/user.png" alt=""
             /></a>
-
           </div>
-
         </nav>
       </header>
 
-      <main id="main">
+      <main>
         <div class="container-settings-tests">
-          <div class="fast-settings">
+          <fieldset>
             <button type="button" aria-pressed="true">time</button>
             <button type="button" aria-pressed="false">words</button>
             <button type="button" aria-pressed="false">quote</button>
-          </div>
-          <div class="space"></div>
-          <div class="fast-settings">
+          </fieldset>
+
+          <fieldset>
             <button type="button" aria-pressed="false">15</button>
             <button type="button" aria-pressed="true">30</button>
             <button type="button" aria-pressed="true">time</button>
             <button type="button" aria-pressed="false">60</button>
             <button type="button" aria-pressed="false">120</button>
-          </div>
+          </fieldset>
         </div>
 
         <!-- Рабия здесь должен быть сам тест , слова из JavaScript должы прогружаться здесь (Aria-hidden)  -->
 
-        <section class="typing test">
+        <section id="typing test">
           <output id="timer">30</output>
 
           <div id="words-wrapper">
@@ -79,10 +72,35 @@
             />
           </div>
         </section>
-      </main>
-      <footer id="footer"></footer>
-    </div>
 
+        <section id="result">
+          <dl>
+            <div id="WPM">
+              <dt>WPM</dt>
+              <dd id="res-wpm">-</dd>
+            </div>
+            <div id="Accuracy">
+              <dt>Accuracy</dt>
+              <dd id="res-acc">-</dd>
+            </div>
+            <div id="Characters">
+              <dt>Characters</dt>
+              <dd id="res-chars">-</dd>
+            </div>
+            <div id="time">
+              <dt>Time</dt>
+              <dd id="res-time">-</dd>
+            </div>
+          </dl>
+
+          <button type="button" id="restart-btn">restart test</button>
+        </section>
+      </main>
+
+      <footer>
+        <p>press <kbd>Tab</kbd> to start</p>
+      </footer>
+    </div>
     <script src="./main.js"></script>
   </body>
 </html>
