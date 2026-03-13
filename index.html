@@ -9,6 +9,7 @@
     <body>
         <div class="container">
             <header>
+                
                 <a class="LOGO">
                     <a href=""> 
                         <img src="./assets/images/Logo.fast.type.png" alt="">
@@ -20,7 +21,7 @@
                         <a class="icon-liderboard" href=""><img src="./assets/images/crown.png" alt=""></a>
                         <a class="icon-info" href=""><img src="./assets/images/info.png" alt=""></a>
                     </div>
-                    
+
                     <div class="register-items" >
                         <a class="bell-icon" href=""><img src="./assets/images/bell.png" alt=""></a>
                         <a class="register-icon" href=""><img src="./assets/images/user.png" alt=""></a>
@@ -28,47 +29,44 @@
                 </nav>
             </header>
 
-                <main>
-                    <div class="container-settings-tests">
-                        <fieldset>
-                            <button type="button"  aria-pressed="true">time</button>
-                            <button type="button"  aria-pressed="false">words</button>
-                            <button type="button"  aria-pressed="false">quote</button>
-                        </fieldset>
-
-                        <fieldset>
-                            <button type="button"  aria-pressed="false">15</button>
-                            <button type="button"  aria-pressed="true">30</button> <button type="button"  aria-pressed="true">time</button>
-                            <button type="button"  aria-pressed="false">60</button>
-                            <button type="button"  aria-pressed="false">120</button>
-                        </fieldset>
-                    </div>
-
-                    <!-- Рабия здесь должен быть сам тест , слова из JavaScript должы прогружаться здесь (Aria-hidden)  -->
-
-                    <section class="typing test">
-                        <output id="timer">30</output>
-
-                        <div id="words-wrapper">
-                            <label for="hidden-input" class="lable_input">Type here</label>
-                            <input 
-                                type="text"
-                                id="hidden-input"
-                                autocomplete="off"
-                                autocorrect="off"
-                                autocapitalize="off"
-                                spellcheck="false">
-                        </div>
-                    </section>
-                </main>
+      <main id="main">
+        <div class="container-settings-tests">
+          <div class="fast-settings">
+            <button type="button" aria-pressed="true">time</button>
+            <button type="button" aria-pressed="false">words</button>
+            <button type="button" aria-pressed="false">quote</button>
+          </div>
+          <div class="space"></div>
+          <div class="fast-settings">
+            <button type="button" aria-pressed="false">15</button>
+            <button type="button" aria-pressed="true">30</button>
+            <button type="button" aria-pressed="true">time</button>
+            <button type="button" aria-pressed="false">60</button>
+            <button type="button" aria-pressed="false">120</button>
+          </div>
         </div>
 
+        <!-- Рабия здесь должен быть сам тест , слова из JavaScript должы прогружаться здесь (Aria-hidden)  -->
 
+        <section class="typing test">
+          <output id="timer">30</output>
 
+          <div id="words-wrapper">
+            <label for="hidden-input" class="lable_input">Type here</label>
+            <input
+              type="text"
+              id="hidden-input"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+            />
+          </div>
+        </section>
+      </main>
+      <footer id="footer"></footer>
+    </div>
 
-
-
-
-        <script src="./main.js"></script>
-    </body>
+    <script src="./main.js"></script>
+  </body>
 </html>
