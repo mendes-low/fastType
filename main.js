@@ -1,18 +1,3 @@
-// ===== POPUP MENU =====
-const wrapper = document.querySelector("#popup-wrapper");
-const popup = document.querySelector("#popup");
-let closeTimeout;
-
-popup.addEventListener("mouseenter", () => {
-    clearTimeout(closeTimeout);
-    popup.classList.add("active");
-});
-
-popup.addEventListener("mouseleave", () => {
-    closeTimeout = setTimeout(() => {
-        popup.classList.remove("active");
-    }, 300);
-});
 
 
 

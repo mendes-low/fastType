@@ -1,115 +1,117 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>FastType</title>
-        <link rel="stylesheet" href="./style.css" />
-    </head>
-    <body>
-        <div class="container">
-            <header id="header">
-                <a class="logo" href="#">
-                    <h1>FastType</h1>
-                </a>
-                <nav>
-                    <div class="main-items">
-                        <a class="icons" id="icon-keyboard" href="#"
-                            ><img src="./assets/images/keyboard(1).png" alt=""
-                        /></a>
-                        <a class="icons" id="icon-liderboard" href="#"
-                            ><img src="./assets/images/crown.png" alt=""
-                        /></a>
-                        <a class="icons" id="icon-info" href="#"
-                            ><img src="./assets/images/info.png" alt=""
-                        /></a>
-                    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastType</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header id="header">
+        <nav>
+        <a class="logo" href="#">
+          <h1>FastType</h1>
+        </a>
+          <div class="main-items">
+            <a class="icons" id="icon-keyboard" href="#"
+              ><img src="./assets/images/keyboard(1).png" alt=""
+            /></a>
+            <a class="icons" id="icon-liderboard" href="#"
+              ><img src="./assets/images/crown.png" alt=""
+            /></a>
+            <a class="icons" id="icon-info" href="#"
+              ><img src="./assets/images/info.png" alt=""
+              /></a>
+              <button class="icons" id="theme-icon">
+                <img src="./assets/images/paint.png" alt="">
+              </button>
+            </div>
+          </nav>
 
-                    <div class="register-items">
-                        <a class="icons" id="bell-icon" href="#">
-                            <img src="./assets/images/bell.png" alt="" />
-                        </a>
-                        <a class="icons" id="register-icon" href="#"
-                            ><img src="./assets/images/user.png" alt=""
-                        /></a>
-                        <!-- <div id="popup-wrapper"> -->
-                          <div class="popup" id="popup">
-                            <button>Profile</button>
-                            <button>Settings</button>
-                            <button>Sign up</button>
-                            <button>Logout</button>
-                          </div>
-                        <!-- </div> -->
-                    </div>
-                </nav>
-            </header>
+          <div class="register-items">
+            <a class="icons" id="bell-icon" href="#">
+              <img src="./assets/images/bell.png" alt="" />
+            </a>
+            <div class="popup-container">
+              <div class="icons" id="register-icon">
+                <img src="./assets/images/user.png" alt="" />
+              </div>
+              
+              <div id="popup">
+                <button>Profile</button>
+                <button>Settings</button>
+                <button>Sign up</button>
+                <button>Logout</button>
+              </div>
+            </div>
+           
+          </div>
+      </header>
 
-            <main>
-                <div class="container-settings-tests">
-                    <div class="buttons-left">
-                        <button>time</button>
-                        <button>words</button>
-                        <button>quote</button>
-                        <button>time</button>
-                    </div>
+      <main>
+        <div class="container-settings-tests">
+          <div class="buttons-left">
+            <button>time</button>
+            <button>words</button>
+            <button>quote</button>
+            <button>time</button>
+          </div>
 
-                    <div class="buttons-right">
-                        <button>15</button>
-                        <button>30</button>
-                        <button>60</button>
-                        <button>120</button>
-                    </div>
-                </div>
-
-                <!-- Рабия здесь должен быть сам тест , слова из JavaScript должы прогружаться здесь (Aria-hidden)  -->
-
-                <section id="typing-test">
-                    <output id="timer">30</output>
-
-                    <div id="words-wrapper">
-                        <label for="hidden-input" class="lable_input"
-                            >Type here</label
-                        >
-                        <input
-                            type="text"
-                            id="hidden-input"
-                            autocomplete="off"
-                            autocorrect="off"
-                            autocapitalize="off"
-                            spellcheck="false"
-                        />
-                    </div>
-                </section>
-
-                <section id="result">
-                    <dl>
-                        <div id="WPM">
-                            <dt>WPM</dt>
-                            <dd id="res-wpm">-</dd>
-                        </div>
-                        <div id="Accuracy">
-                            <dt>Accuracy</dt>
-                            <dd id="res-acc">-</dd>
-                        </div>
-                        <div id="Characters">
-                            <dt>Characters</dt>
-                            <dd id="res-chars">-</dd>
-                        </div>
-                        <div id="time">
-                            <dt>Time</dt>
-                            <dd id="res-time">-</dd>
-                        </div>
-                    </dl>
-
-                    <button type="button" id="restart-btn">restart test</button>
-                </section>
-            </main>
-
-            <footer>
-                <p>press <kbd>Tab</kbd> to start</p>
-            </footer>
-
+          <div class="buttons-right">
+            <button>15</button>
+            <button>30</button>
+            <button>60</button>
+            <button>120</button>
+          </div>
         </div>
-        <script src="./main.js"></script>
-    </body>
+
+        <!-- Рабия здесь должен быть сам тест , слова из JavaScript должы прогружаться здесь (Aria-hidden)  -->
+
+        <section id="typing-test">
+          <output id="timer">30</output>
+
+          <div id="words-wrapper">
+            <label for="hidden-input" class="lable_input">Type here</label>
+            <input
+              type="text"
+              id="hidden-input"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+            />
+          </div>
+        </section>
+
+        <section id="result">
+          <dl>
+            <div id="WPM">
+              <dt>WPM</dt>
+              <dd id="res-wpm">-</dd>
+            </div>
+            <div id="Accuracy">
+              <dt>Accuracy</dt>
+              <dd id="res-acc">-</dd>
+            </div>
+            <div id="Characters">
+              <dt>Characters</dt>
+              <dd id="res-chars">-</dd>
+            </div>
+            <div id="time">
+              <dt>Time</dt>
+              <dd id="res-time">-</dd>
+            </div>
+          </dl>
+
+          <button type="button" id="restart-btn">restart test</button>
+        </section>
+      </main>
+
+      <footer>
+        <p>press <kbd>Tab</kbd> to start</p>
+      </footer>
+    </div>
+    <script src="./main.js"></script>
+  </body>
 </html>
