@@ -9,10 +9,8 @@
   <body>
     <div class="container">
       <header id="header">
-        <a class="LOGO" href="#">
-          <div class="logotype">
-            <img src="./assets/images/Logo.fast.type.png" alt="" />
-          </div>
+        <a class="logo" href="#">
+          <h1>FastType</h1>
         </a>
         <nav>
           <div class="main-items">
@@ -34,25 +32,31 @@
             <a class="icons" id="register-icon" href="#"
               ><img src="./assets/images/user.png" alt=""
             /></a>
+            <div class="popup" id="popup">
+              <button>Profile</button>
+              <button>Settings</button>
+              <button>Sign up</button>
+              <button>Logout</button>
+            </div>
           </div>
         </nav>
       </header>
 
       <main>
         <div class="container-settings-tests">
-          <fieldset>
-            <button type="button" aria-pressed="true">time</button>
-            <button type="button" aria-pressed="false">words</button>
-            <button type="button" aria-pressed="false">quote</button>
-          </fieldset>
+          <div class="buttons-left">
+            <button>time</button>
+            <button>words</button>
+            <button>quote</button>
+            <button>time</button>
+          </div>
 
-          <fieldset>
-            <button type="button" aria-pressed="false">15</button>
-            <button type="button" aria-pressed="true">30</button>
-            <button type="button" aria-pressed="true">time</button>
-            <button type="button" aria-pressed="false">60</button>
-            <button type="button" aria-pressed="false">120</button>
-          </fieldset>
+          <div class="buttons-right">
+            <button>15</button>
+            <button>30</button>
+            <button>60</button>
+            <button>120</button>
+          </div>
         </div>
 
         <!-- Рабия здесь должен быть сам тест , слова из JavaScript должы прогружаться здесь (Aria-hidden)  -->
