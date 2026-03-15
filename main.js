@@ -9,3 +9,20 @@
 // const gameTime1=30*1000
 // const gameTime2=60*1000
 // const gameTime3=120*1000
+
+
+
+const themeButtons = document.querySelectorAll("[data-theme]");
+
+themeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const theme = button.dataset.theme;
+    document.body.className = theme;
+    localStorage.setItem("theme", theme);
+  });
+});
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  document.body.className = savedTheme;
+}
