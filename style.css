@@ -1,3 +1,18 @@
+:root {
+    --bg: #242933;
+    --text: #d8dee9;
+    --muted: #9aa4b2;
+    --panel: #2e3440;
+    --panel-2: #3b4252;
+    --accent: #ff9d3f;
+    --input-bg: #ffffff;
+    --popup-bg: #ffffff;
+    --popup-text: #1f2937;
+    --popup-hover: #f2f2f2;
+    --kbd-bg: #2f3c50;
+    --icon-filter: brightness(0) invert(1);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,24 +33,37 @@
         sans-serif;
 }
 
+
 .container {
-    background-color: #242933;
-    height: 100vh;
-    width: 100vw;
+    background-color: var(--bg);
+    min-height: 100vh;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
+
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 60px;
-    color: #d8dee9;
+    color: var(--text);
 }
+
 .logo {
-    color: #d8dee9;
+    color: var(--text);
+    transition: color 0.3s ease;
 }
+
+.logo h1 {
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+
 .icons {
-    filter: brightness(0) invert(1);
+    filter: var(--icon-filter);
+    transition: filter 0.3s ease;
 }
+
 /* nav */
 
 nav {
@@ -45,13 +73,10 @@ nav {
     gap: 60px;
 }
 
-
-
 .main-items {
     display: flex;
     gap: 10px;
 }
-
 
 .register-items {
     display: flex;
@@ -69,9 +94,11 @@ nav {
 .icons img:hover {
     opacity: 1;
 }
-#theme-icon{
-  border: none;
-  background:none;
+
+#theme-icon {
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 /* MAIN */
@@ -90,9 +117,9 @@ main {
     padding: 0 50px;
     width: 1000px;
     height: 40px;
-    /* gap: 30px; */
-    background: #2e3440;
+    background: var(--panel);
     border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .container-settings-tests button {
@@ -100,91 +127,104 @@ main {
     border: none;
     font-size: 14px;
     cursor: pointer;
-    color: #d8dee9;
+    color: var(--text);
+    transition: color 0.3s ease;
 }
+
 .buttons-left,
 .buttons-right {
     display: flex;
     gap: 20px;
 }
 
+/* ------------------POPUP-MENU------------------ */
 
-
-
-/* ------------------POPUP-MEMU------------------ */
-
-
-.popup-container{
+.popup-container {
     position: relative;
 }
 
-#popup{
+#popup {
     position: absolute;
     top: 50px;
     right: 0;
-
     display: flex;
     flex-direction: column;
-
-    background: white;
+    background: var(--popup-bg);
     border-radius: 8px;
     padding: 10px;
     width: 120px;
-
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-
     transition: 0.25s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* кнопки внутри */
-#popup button{
+#popup button {
     border: none;
     background: none;
     padding: 10px;
     text-align: left;
     cursor: pointer;
     border-radius: 5px;
+    color: var(--popup-text);
 }
 
-#popup button:hover{
-    background: #f2f2f2;
+#popup button:hover {
+    background: var(--popup-hover);
 }
 
-/* показываем popup при hover */
-.popup-container:hover #popup{
+.popup-container:hover #popup {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-
-
-
 /* TYPING AREA */
 
-#typing {
+#typing-test {
     text-align: center;
+    margin-top: 30px;
 }
 
 #timer {
     font-size: 40px;
-    color: #ff9d3f;
+    color: var(--accent);
     margin-bottom: 20px;
+    transition: color 0.3s ease;
 }
 
 #words-wrapper {
     margin-top: 20px;
+    color: var(--muted);
 }
 
+/* слова */
+.word {
+    font-size: 32px;
+    color: var(--muted);
+    margin-right: 10px;
+    line-height: 1.8;
+    transition: color 0.2s ease;
+}
+
+.word.active {
+    color: var(--text);
+}
+
+.word.correct {
+    color: var(--text);
+}
+
+.word.wrong {
+    color: #ef4444;
+}
+
+/* скрытый input */
 #hidden-input {
-    width: 400px;
-    padding: 8px;
-    border: none;
-    outline: none;
-    background: #fff;
-    border-radius: 4px;
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
 }
 
 /* RESULT */
@@ -192,6 +232,7 @@ main {
 #result {
     margin-top: 40px;
     text-align: center;
+    color: var(--text);
 }
 
 #result dl {
@@ -204,18 +245,19 @@ main {
 dt {
     font-size: 14px;
     opacity: 0.7;
+    color: var(--muted);
 }
 
 dd {
     font-size: 24px;
-    color: #ff9d3f;
+    color: var(--accent);
 }
 
 #restart-btn {
-    padding: 5px 10px;
+    padding: 8px 14px;
     border: none;
-    background: #ff9d3f;
-    color: white;
+    background: var(--accent);
+    color: #ffffff;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -226,10 +268,12 @@ footer {
     margin-top: 60px;
     text-align: center;
     opacity: 0.7;
+    color: var(--muted);
 }
 
 kbd {
-    background: #2f3c50;
+    background: var(--kbd-bg);
     padding: 4px 8px;
     border-radius: 4px;
+    color: var(--text);
 }
