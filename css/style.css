@@ -180,6 +180,48 @@ main {
     transform: translateY(0);
 }
 
+
+/* -----------POPUP-THEME-------- */
+
+.popup-theme-container{
+     position: relative;
+}
+#theme-popup{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--popup-bg);
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.25s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+#theme-popup button {
+    border: none;
+    background: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--popup-text);
+}
+#theme-popup button:hover {
+    background: var(--popup-hover);
+}
+
+.popup-theme-container:hover #theme-popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
 /* TYPING AREA */
 
 #typing-test {
