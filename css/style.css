@@ -120,7 +120,7 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 10px 50px;
-    width: 1000px;
+    width: 800px;
     height: 40px;
     background: var(--panel);
     border-radius: 10px;
