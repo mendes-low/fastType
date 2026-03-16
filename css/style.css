@@ -119,7 +119,7 @@ main {
 .container-settings-tests {
     display: flex;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 10px 50px;
     width: 1000px;
     height: 40px;
     background: var(--panel);
@@ -140,6 +140,15 @@ main {
 .buttons-right {
     display: flex;
     gap: 20px;
+}
+.buttons-left button,
+.buttons-right button{
+    border-right: #3b4252 3px solid;
+    padding-right: 10px;
+}
+.buttons-left button:last-child,
+.buttons-right button:last-child{
+    border: none;
 }
 
 /* ------------------POPUP-MENU------------------ */
