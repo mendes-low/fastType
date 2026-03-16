@@ -62,8 +62,13 @@
 .icons {
     filter: var(--icon-filter);
     transition: filter 0.3s ease;
+
 }
 
+#register-button{
+    background: none;
+    border: none;
+}
 /* nav */
 
 nav {
