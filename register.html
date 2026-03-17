@@ -34,31 +34,40 @@
                 id="email"
                 type="email"
                 placeholder="email"
-                />
+              />
               <input
                 class="register-inputs"
                 id="password"
                 type="password"
                 placeholder="password"
-                />
-                
-                <input
+              />
+
+              <input
                 class="register-inputs"
                 id="verify-password"
                 type="password"
                 placeholder="verify password"
-                />
-                
-                <button class="register-inputs" type="submit">sign up</button>
-                <p class="error"></p>
+              />
+
+              <button class="register-inputs" type="submit">sign up</button>
+              <p id="error"></p>
             </form>
           </section>
 
           <section class="login-bar">
             <h1 class="title">log in</h1>
             <form id="login-form">
-              <input class="register-inputs" placeholder="email" type="email" />
-              <input class="register-inputs" placeholder="password" type="password" />
+              <input
+               class="register-inputs"
+               id="login-email"
+               placeholder="email" 
+               type="email" />
+              <input
+                class="register-inputs"
+                id="login-password"
+                placeholder="password"
+                type="password"
+              />
               <div class="remember-box">
                 <input
                   class="register-inputs"
@@ -68,30 +77,27 @@
                 <label for="checkbox_remember">remember me</label>
               </div>
               <button class="register-inputs" type="submit">sign in</button>
-              <div class="link">
-                I forgot my password <a href="#">reset</a>
-              </div>
+              <div class="link">I forgot my password <a href="#">reset</a></div>
+              <p id="err"></p>
             </form>
           </section>
         </div>
       </main>
 
-
-
-
-
       <div class="background">
-  <span class="floating-letter" style="--d: 0s; --s: 1.5; left: 10%;">A</span>
-  <span class="floating-letter" style="--d: 2s; --s: 0.8; left: 30%;">B</span>
-  <span class="floating-letter" style="--d: 1s; --s: 1.2; left: 50%;">C</span>
-  <span class="floating-letter" style="--d: 3s; --s: 2.0; left: 70%;">D</span>
-</div>
-
-
-
-
-
-
+        <span class="floating-letter" style="--d: 0s; --s: 1.5; left: 10%"
+          >A</span
+        >
+        <span class="floating-letter" style="--d: 2s; --s: 0.8; left: 30%"
+          >B</span
+        >
+        <span class="floating-letter" style="--d: 1s; --s: 1.2; left: 50%"
+          >C</span
+        >
+        <span class="floating-letter" style="--d: 3s; --s: 2; left: 70%"
+          >D</span
+        >
+      </div>
     </div>
     <script src="./js/auth.js"></script>
     <script src="./js/main.js"></script>
