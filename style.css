@@ -230,7 +230,7 @@ main {
 /* RESULT */
 
 #result {
-  margin-top: 40px;
+  /* margin-top: 40px; */
   text-align: center;
   color: var(--text);
 }
