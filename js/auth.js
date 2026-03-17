@@ -1,41 +1,18 @@
 const registerButton = document.querySelector("#register-button");
-const registerForm = document.getElementById("registerForm");
+const registerForm = document.querySelector("#registration-form");
 
-const API_URL = "https://69b60ba5583f543fbd9cd75c.mockapi.io/user";
-
-registerButton.addEventListener("click", () => {
-  setUsers();
-});
-
-function setUsers() {
-
-
-
-
-
-
-
-    
-}
-
-
-
-
-
-
-
-
+const API_URL = "https://69b26ccae06ef68ddd950db6.mockapi.io/fasttypeApi";
 
 if (registerForm) {
   registerForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const error = document.getElementById("error");
+    const error = document.querySelector(".error");
     error.textContent = "";
 
     const usernameInput = document.getElementById("username");
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
-    const confirmPasswordInput = document.getElementById("confirmPassword");
+    const confirmPasswordInput = document.getElementById("verify-password");
 
     const username = usernameInput.value.trim();
     const email = emailInput.value.trim();
@@ -47,7 +24,7 @@ if (registerForm) {
       return;
     }
 
-    const checkResponse = await fetch(`${API_URL}?type=user`);
+    const checkResponse = await fetch(`${API_URL}`);
     const allUsers = await checkResponse.json();
 
     const emailExists = allUsers.some((user) => user.email === email);
@@ -63,15 +40,16 @@ if (registerForm) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        type: "user",
         username,
         email,
         password,
         createdAt: new Date().toISOString(),
       }),
     });
+    localStorage.setItem("currentUser", JSON.stringify(allUsers[0]));
 
-    window.location.href = "login.html";
+    window.location.href="../index.html"
+    
   });
 }
 
@@ -87,7 +65,7 @@ if (loginForm) {
     const email = document.getElementById("loginEmail").value.trim();
     const password = document.getElementById("loginPassword").value;
 
-    const response = await fetch(`${API_URL}?type=user&email=${email}`);
+    const response = await fetch(`${API_URL}?email=${email}`);
 
     const users = await response.json();
 
@@ -102,8 +80,6 @@ if (loginForm) {
     }
 
     localStorage.setItem("currentUser", JSON.stringify(users[0]));
-
-    window.location.href = "index.html";
   });
 }
 
@@ -116,12 +92,13 @@ if (welcome) {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   if (!currentUser) {
-    window.location.href = "login.html";
+    error.textContent="You need to Log in"
   } else {
-    welcome.textContent = `Welcome, ${currentUser.username}`;
-    avatar.src = currentUser.avatar;
+    
   }
 }
+// welcome.textContent = `Welcome, ${currentUser.username}`;
+// avatar.src = currentUser.avatar;
 
 if (logoutBtn) {
   logoutBtn.addEventListener("click", () => {

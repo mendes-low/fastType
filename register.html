@@ -22,30 +22,35 @@
         <div class="register-container">
           <section class="regestration-bar">
             <h1 class="title">register</h1>
-            <form>
+            <form id="registration-form">
               <input
                 class="register-inputs"
+                id="username"
                 type="text"
                 placeholder="username"
               />
               <input
                 class="register-inputs"
-                type="password"
+                id="email"
+                type="email"
                 placeholder="email"
-              />
+                />
               <input
                 class="register-inputs"
+                id="password"
                 type="password"
                 placeholder="password"
-              />
-
-              <input
+                />
+                
+                <input
                 class="register-inputs"
+                id="verify-password"
                 type="password"
                 placeholder="verify password"
-              />
-
-              <button class="register-inputs" type="submit">sign up</button>
+                />
+                
+                <button class="register-inputs" type="submit">sign up</button>
+                <p class="error"></p>
             </form>
           </section>
 
@@ -53,7 +58,7 @@
             <h1 class="title">log in</h1>
             <form id="login-form">
               <input class="register-inputs" placeholder="email" type="email" />
-              <input class="register-inputs" placeholder="email" type="email" />
+              <input class="register-inputs" placeholder="password" type="password" />
               <div class="remember-box">
                 <input
                   class="register-inputs"
@@ -64,7 +69,7 @@
               </div>
               <button class="register-inputs" type="submit">sign in</button>
               <div class="link">
-                Already have an account? <a href="login.html">Login</a>
+                I forgot my password <a href="#">reset</a>
               </div>
             </form>
           </section>
