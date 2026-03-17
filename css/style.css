@@ -244,6 +244,7 @@ main {
 }
 
 #timer {
+    display: flex;
     font-size: 40px;
     color: var(--accent);
     margin-bottom: 20px;
