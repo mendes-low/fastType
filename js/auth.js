@@ -6,7 +6,7 @@ const API_URL = "https://69b26ccae06ef68ddd950db6.mockapi.io/fasttypeApi";
 if (registerForm) {
   registerForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const error = document.querySelector(".error");
+    const error = document.querySelector("#error");
     error.textContent = "";
 
     const usernameInput = document.getElementById("username");
@@ -54,20 +54,32 @@ if (registerForm) {
 }
 
 // == LOGIN ==
-const loginForm = document.getElementById("loginForm");
+const loginForm = document.getElementById("login-form");
 
 if (loginForm) {
   loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const error = document.getElementById("error");
+    const error = document.querySelector("#err");
     error.textContent = "";
 
-    const email = document.getElementById("loginEmail").value.trim();
-    const password = document.getElementById("loginPassword").value;
+    const email = document.getElementById("login-email").value.trim();
+    const password = document.getElementById("login-password").value;
 
     const response = await fetch(`${API_URL}?email=${email}`);
 
     const users = await response.json();
+
+  
+     const allResponse = await fetch(`${API_URL}`);
+
+    const allUsers = await allResponse.json();
+
+    const emailExists = allUsers.some((user) => user.email === email);
+
+    if (!emailExists) {
+      error.textContent = "you need to register";
+      return;
+    }
 
     if (users.length === 0) {
       error.textContent = "User not found.";
@@ -80,6 +92,16 @@ if (loginForm) {
     }
 
     localStorage.setItem("currentUser", JSON.stringify(users[0]));
+
+    window.location.href="../index.html"
+
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    
+    if (!currentUser) {
+      error.textContent="You need to register"
+    } else {
+      
+    }
   });
 }
 
@@ -88,15 +110,8 @@ const welcome = document.getElementById("welcome");
 const logoutBtn = document.getElementById("logoutBtn");
 const avatar = document.querySelector(".avatar");
 
-if (welcome) {
-  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-
-  if (!currentUser) {
-    error.textContent="You need to Log in"
-  } else {
-    
-  }
-}
+// if (welcome) {
+// }
 // welcome.textContent = `Welcome, ${currentUser.username}`;
 // avatar.src = currentUser.avatar;
 
