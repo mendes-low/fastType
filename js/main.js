@@ -24,7 +24,7 @@ async function loadLeaderboard() {
             container.innerHTML += row;
         });
     } catch (error) {
-        container.innerHTML = "Erorr not data";
+        container.innerHTML = "Error not data";
         console.error(error);
     }
 }
