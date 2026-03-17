@@ -1,5 +1,3 @@
-
-
 async function loadLeaderboard() {
     const container = document.querySelector("#leaderboard-data");
 

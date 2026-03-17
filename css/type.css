@@ -114,9 +114,34 @@ main {
   font-size: 16px;
 }
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
+/* тестовый */
+
+
+#words-wrapper {
+    height: 105px; /* Высота ровно на 3 строки */
+    overflow: hidden; /* Скрываем лишние строки */
+    position: relative;
+    line-height: 35px; /* Фиксированная высота строки */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
+
+.word {
+    margin-right: 10px;
+    height: 35px;
+}
+
+.letter.current {
+    border-left: 2px solid var(--accent);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.correct { color: var(--text); opacity: 1; }
+.incorrect { color: #ef4444; border-bottom: 2px solid #ef4444; }
+
 
