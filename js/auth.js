@@ -105,6 +105,7 @@ if (logoutBtn) {
   });
 }
 
+
 // == MAIN PAGE ==
 // const welcome = document.getElementById("welcome");
 // const logoutBtn = document.getElementById("logout");
