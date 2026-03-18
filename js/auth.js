@@ -82,74 +82,28 @@ if (loginForm) {
 }
 
 const registerBtn = document.querySelector("#register-button");
-const popup = document.getElementById("popup");
+const popupUser = document.getElementById("popup");
 const logoutBtn = document.getElementById("logout");
 
-// Загруженный пользователь
+const popup = document.getElementById("popup");
 const user = JSON.parse(localStorage.getItem("currentUser"));
 
-// --- ПОКАЗ popup ТОЛЬКО ЕСЛИ ПОЛЬЗОВАТЕЛЬ ЕСТЬ ---
-if (user) {
-  // Показать иконку пользователя и включить возможность открыть popup
-  registerBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    popup.classList.toggle("active");
-  });
-} else {
-  // Если пользователь не залогинен — перенаправить на регистрацию
-  registerBtn.addEventListener("click", (e) => {
-    e.preventDefault();
+// logoutBtn.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   if (!user) {
+//     // popup.classList.toggle("active");
+//     window.location.href = "../register.html";
+//     return;
+//   }
+// });
+
+//  logout
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("currentUser");
     window.location.href = "../register.html";
   });
 }
-
-// --- ЛОГАУТ ---
-if (logoutBtn) {
-  logoutBtn.addEventListener("click", async (e) => {
-    e.preventDefault();
-
-    if (!user) return;
-
-    try {
-      // Удаляем пользователя из MockAPI
-      await fetch(`${API_URL}/${user.id}`, { method: "DELETE" });
-
-      // Очищаем localStorage
-      localStorage.removeItem("currentUser");
-
-      // Перенаправляем на страницу регистрации
-      window.location.href = "../register.html";
-    } catch (err) {
-      console.error("Ошибка при удалении пользователя:", err);
-    }
-  });
-}
-
-
-
-// const registerBtn = document.querySelector("#register-button");
-// const popupUser = document.getElementById("popup");
-// const logoutBtn = document.getElementById("logout");
-
-// const popup = document.getElementById("popup");
-// const user = JSON.parse(localStorage.getItem("currentUser"));
-
-// // logoutBtn.addEventListener("click", (e) => {
-// //   e.preventDefault();
-// //   if (!user) {
-// //     // popup.classList.toggle("active");
-// //     window.location.href = "../register.html";
-// //     return;
-// //   }
-// // });
-
-// //  logout
-// if (logoutBtn) {
-//   logoutBtn.addEventListener("click", () => {
-//     localStorage.removeItem("currentUser");
-//     window.location.href = "../register.html";
-//   });
-// }
 
 // == MAIN PAGE ==
 // const welcome = document.getElementById("welcome");
