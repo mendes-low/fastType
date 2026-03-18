@@ -7,7 +7,9 @@
     --input:#2c3647;
     
 }
-
+.passive{
+  display: flex;
+}
 
 
 

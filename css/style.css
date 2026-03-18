@@ -153,6 +153,7 @@ main {
 
 /* ------------------POPUP-MENU------------------ */
 
+
 .popup-container {
     position: relative;
 }
@@ -193,7 +194,18 @@ main {
     visibility: visible;
     transform: translateY(0);
 }
+/* #popup {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.25s;
+} */
 
+#popup.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
 
 

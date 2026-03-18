@@ -9,47 +9,44 @@ if (registerForm) {
     const error = document.querySelector("#error");
     error.textContent = "";
 
-    const usernameInput = document.getElementById("username");
-    const emailInput = document.getElementById("email");
-    const passwordInput = document.getElementById("password");
-    const confirmPasswordInput = document.getElementById("verify-password");
-
-    const username = usernameInput.value.trim();
-    const email = emailInput.value.trim();
-    const password = passwordInput.value;
-    const confirmPassword = confirmPasswordInput.value;
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("verify-password").value;
 
     if (password !== confirmPassword) {
       error.textContent = "Passwords do not match.";
       return;
     }
 
-    const checkResponse = await fetch(`${API_URL}`);
-    const allUsers = await checkResponse.json();
+    const response = await fetch(API_URL);
+    const users = await response.json();
 
-    const emailExists = allUsers.some((user) => user.email === email);
+    const emailExists = users.some((user) => user.email === email);
 
     if (emailExists) {
       error.textContent = "Email already registered.";
       return;
     }
 
+    const newUser = {
+      username,
+      email,
+      password,
+      createdAt: new Date().toISOString(),
+    };
+
     await fetch(API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        username,
-        email,
-        password,
-        createdAt: new Date().toISOString(),
-      }),
+      body: JSON.stringify(newUser),
     });
-    localStorage.setItem("currentUser", JSON.stringify(allUsers[0]));
 
-    window.location.href="../index.html"
-    
+    localStorage.setItem("currentUser", JSON.stringify(newUser));
+
+    window.location.href = "../index.html";
   });
 }
 
@@ -69,23 +66,10 @@ if (loginForm) {
 
     const users = await response.json();
 
-  
-     const allResponse = await fetch(`${API_URL}`);
-
-    const allUsers = await allResponse.json();
-
-    const emailExists = allUsers.some((user) => user.email === email);
-
-    if (!emailExists) {
-      error.textContent = "you need to register";
-      return;
-    }
-
     if (users.length === 0) {
       error.textContent = "User not found.";
       return;
     }
-
     if (users[0].password !== password) {
       error.textContent = "Invalid password.";
       return;
@@ -93,31 +77,46 @@ if (loginForm) {
 
     localStorage.setItem("currentUser", JSON.stringify(users[0]));
 
-    window.location.href="../index.html"
-
-    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    
-    if (!currentUser) {
-      error.textContent="You need to register"
-    } else {
-      
-    }
+    window.location.href = "../index.html";
   });
 }
 
+const registerBtn = document.querySelector("#register-button");
+const popupUser = document.getElementById("popup");
+const logoutBtn = document.getElementById("logout");
+
+const popup = document.getElementById("popup");
+const user = JSON.parse(localStorage.getItem("currentUser"));
+
+// logoutBtn.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   if (!user) {
+//     // popup.classList.toggle("active");
+//     window.location.href = "../register.html";
+//     return;
+//   }
+// });
+
+//  logout
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("currentUser");
+  window.location.href = "../register.html";
+});
+
 // == MAIN PAGE ==
-const welcome = document.getElementById("welcome");
-const logoutBtn = document.getElementById("logoutBtn");
-const avatar = document.querySelector(".avatar");
+// const welcome = document.getElementById("welcome");
+// const logoutBtn = document.getElementById("logout");
+// const avatar = document.querySelector(".avatar");
 
 // if (welcome) {
 // }
 // welcome.textContent = `Welcome, ${currentUser.username}`;
 // avatar.src = currentUser.avatar;
 
-if (logoutBtn) {
-  logoutBtn.addEventListener("click", () => {
-    localStorage.removeItem("currentUser");
-    window.location.href = "login.html";
-  });
-}
+// if (logoutBtn) {
+//   logoutBtn.addEventListener("click", () => {
+//     localStorage.removeItem("currentUser");
+//     window.location.href = "login.html";
+//     if(popupUser.classList())
+//   });
+// }
