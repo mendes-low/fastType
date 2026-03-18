@@ -149,6 +149,8 @@ function gameOver() {
     const wpm = Math.round((correctLetters / 5) / (gameTime / 60000));
     resWpm.textContent = wpm;
     resTime.textContent = (gameTime / 1000) + "s";
+    console.log(resAcc, resTime, resWpm);
+    
 }
 
 timeButtons.forEach(btn => {
