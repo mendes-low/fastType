@@ -352,4 +352,81 @@ kbd {
 
 
 
+.profile-page {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+    color: var(--text);
+}
 
+.profile-title {
+    font-size: 42px;
+    color: var(--accent);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.profile-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.profile-card {
+    background: var(--panel);
+    border-radius: 14px;
+    padding: 24px 18px;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-4px);
+}
+
+.profile-card span {
+    display: block;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.profile-card h2 {
+    font-size: 38px;
+    color: var(--accent);
+}
+
+.profile-history {
+    background: var(--panel);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.profile-history h3 {
+    margin-bottom: 20px;
+    color: var(--text);
+    font-size: 24px;
+}
+
+.history-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--panel-2);
+    color: var(--text);
+}
+
+.history-row.header {
+    color: var(--accent);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.history-row:last-child {
+    border-bottom: none;
+}

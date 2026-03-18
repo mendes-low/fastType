@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background: #111111;
+  color: #d1d5db;
+}
+
+.profile-page {
+  min-height: 100vh;
+  padding: 20px 32px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f3f4f6;
+}
+
+.header-icons {
+  display: flex;
+  gap: 18px;
+}
+
+.header-icons a,
+.profile-user {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.profile-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-card,
+.record-card,
+.activity-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+}
+
+.profile-card {
+  display: grid;
+  grid-template-columns: 120px 1fr 2fr;
+  gap: 24px;
+  align-items: center;
+  padding: 24px;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #2c2c2c;
+}
+
+.user-info h1 {
+  font-size: 34px;
+  color: #f3f4f6;
+  margin-bottom: 6px;
+}
+
+.user-info p {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.level-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.level-line {
+  width: 120px;
+  height: 8px;
+  background: #2c2c2c;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.level-fill {
+  width: 45%;
+  height: 100%;
+  background: #f3f4f6;
+}
+
+.main-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.stat-box p,
+.record-card p {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.stat-box h2,
+.record-card h3 {
+  font-size: 36px;
+  color: #f3f4f6;
+  font-weight: 500;
+}
+
+.records-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.record-card {
+  padding: 20px;
+  min-height: 120px;
+}
+
+.record-card span {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.activity-card {
+  padding: 20px;
+}
+
+.activity-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.activity-top h2 {
+  color: #f3f4f6;
+}
+
+.activity-top span {
+  color: #6b7280;
+}
+
+.heatmap {
+  display: grid;
+  grid-template-columns: repeat(30, 14px);
+  gap: 6px;
+}
+
+.cell {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #222;
+}
+
+.cell.l1 { background: #3a3a3a; }
+.cell.l2 { background: #6b6b6b; }
+.cell.l3 { background: #bdbdbd; }
+.cell.l4 { background: #f3f4f6; }
