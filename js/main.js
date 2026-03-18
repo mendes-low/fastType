@@ -3,7 +3,7 @@ async function loadLeaderboard() {
 
     try {
         const response = await fetch(
-            "https://69b60ba5583f543fbd9cd75c.mockapi.io/user",
+            "https://69b26ccae06ef68ddd950db6.mockapi.io/fasttypeApi",
         );
         const users = await response.json();
 
@@ -22,7 +22,7 @@ async function loadLeaderboard() {
             container.innerHTML += row;
         });
     } catch (error) {
-        container.innerHTML = "Error not data";
+        container.textContent = "Error not data";
         console.error(error);
     }
 }
