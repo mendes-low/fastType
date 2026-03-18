@@ -85,6 +85,12 @@ function displayName() {
     }
 }
 
-loadComponent("header", "../components/header.html", initThemes);
-loadComponent("header", "../components/header.html", initPopup);
-loadComponent("header", "../components/header.html", displayName);
+function initFucntions() {
+  initThemes();
+  initPopup();
+  displayName();
+}
+
+loadComponent("header", "../components/header.html", initFucntions);
+// loadComponent("header", "../components/header.html", initPopup);
+// loadComponent("header", "../components/header.html", displayName);
