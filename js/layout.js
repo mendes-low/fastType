@@ -92,5 +92,3 @@ function initFucntions() {
 }
 
 loadComponent("header", "../components/header.html", initFucntions);
-// loadComponent("header", "../components/header.html", initPopup);
-// loadComponent("header", "../components/header.html", displayName);
