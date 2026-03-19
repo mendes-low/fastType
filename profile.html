@@ -1,59 +1,58 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Profile</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/theme.css" />
-</head>
-<body>
-  <div class="container">
-    <header id="header"></header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/theme.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header id="header"></header>
 
-    <main>
-      <section class="profile-page">
-        <h1 class="profile-title">Profile Stats</h1>
+      <main>
+        <section class="profile-page">
+          <h1 class="profile-title">Profile Stats</h1>
 
-        <div class="profile-cards">
-          <div class="profile-card">
-            <span>Tests</span>
-            <h2 id="tests-count">0</h2>
+          <div class="profile-cards">
+            <div class="profile-card">
+              <span>Tests</span>
+              <h2 id="tests-count">0</h2>
+            </div>
+
+            <div class="profile-card">
+              <span>Best WPM</span>
+              <h2 id="best-wpm">0</h2>
+            </div>
+
+            <div class="profile-card">
+              <span>Average WPM</span>
+              <h2 id="avg-wpm">0</h2>
+            </div>
+
+            <div class="profile-card">
+              <span>Average Accuracy</span>
+              <h2 id="avg-acc">0%</h2>
+            </div>
           </div>
 
-          <div class="profile-card">
-            <span>Best WPM</span>
-            <h2 id="best-wpm">0</h2>
+          <div class="profile-history">
+            <h3>Recent Results</h3>
+
+            <div class="history-row header">
+              <span>Date</span>
+              <span>WPM</span>
+              <span>Accuracy</span>
+            </div>
+
+            <div id="history-list"></div>
           </div>
+        </section>
+      </main>
+    </div>
 
-          <div class="profile-card">
-            <span>Average WPM</span>
-            <h2 id="avg-wpm">0</h2>
-          </div>
-
-          <div class="profile-card">
-            <span>Average Accuracy</span>
-            <h2 id="avg-acc">0%</h2>
-          </div>
-        </div>
-
-        <div class="profile-history">
-          <h3>Recent Results</h3>
-
-          <div class="history-row header">
-            <span>Date</span>
-            <span>WPM</span>
-            <span>Accuracy</span>
-          </div>
-
-          <div id="history-list"></div>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <script src="./js/layout.js"></script>
-  <script src="./js/profile.js"></script>
-</body>
-</html> 
-
+    <script src="./js/layout.js"></script>
+    <script src="./js/profile.js"></script>
+  </body>
+</html>
