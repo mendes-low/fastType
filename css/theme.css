@@ -1,43 +1,43 @@
 /* DEFAULT THEME */
 
 body {
-    --bg: #242933;
-    --text: #d8dee9;
-    --panel: #2e3440;
-    --accent: #ff9d3f;
-    --words: #8f9bb3;
-    --icon-filter: brightness(0) invert(1);
+  --bg: #242933;
+  --text: #d8dee9;
+  --panel: #2e3440;
+  --accent: #ff9d3f;
+  --words: #8f9bb3;
+  --icon-filter: brightness(0) invert(1);
 }
 
 /* LIGHT */
 
 body.light {
-    --bg: #f5f5f5;
-    --text: #1f2937;
-    --panel: #e5e7eb;
-    --accent: #2563eb;
-    --words: #6b7280;
-    --icon-filter: none;
+  --bg: #f5f5f5;
+  --text: #1f2937;
+  --panel: #e5e7eb;
+  --accent: #2563eb;
+  --words: #6b7280;
+  --icon-filter: none;
 }
 
 /* BLUE */
 
 body.blue {
-    --bg: #0f172a;
-    --text: #e2e8f0;
-    --panel: #1e293b;
-    --accent: #38bdf8;
-    --words: #94a3b8;
-    --icon-filter: brightness(0) invert(1);
+  --bg: #0f172a;
+  --text: #e2e8f0;
+  --panel: #1e293b;
+  --accent: #38bdf8;
+  --words: #94a3b8;
+  --icon-filter: brightness(0) invert(1);
 }
 
 /* MATRIX */
 
 body.matrix {
-    --bg: #000000;
-    --text: #00ff00;
-    --panel: #001a00;
-    --accent: #00ff00;
-    --words: #00aa00;
-    --icon-filter: brightness(0) invert(1);
+  --bg: #000000;
+  --text: #00ff00;
+  --panel: #001a00;
+  --accent: #00ff00;
+  --words: #00aa00;
+  --icon-filter: brightness(0) invert(1);
 }

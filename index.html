@@ -1,75 +1,79 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastType</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/leaderboard.css" />
+    <link rel="stylesheet" href="./css/type.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FastType</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/theme.css" />
-  <link rel="stylesheet" href="./css/leaderboard.css" />
-  <link rel="stylesheet" href="./css/type.css" />
-</head>
+  <body>
+    <div class="container">
+      <header id="header"></header>
+      <main>
+        <div class="container-settings-tests">
+          <div class="buttons-left">
+            <button class="mode-btn active" data-mode="words">words</button>
+            <button class="mode-btn" data-mode="quote">quote</button>
+            <button class="mode-btn" data-mode="language">language</button>
+          </div>
 
-<body>
-  <div class="container">
-    <header id="header"></header>
-    <main>
-      <div class="container-settings-tests">
-        <div class="buttons-left">
-          <button class="mode-btn active" data-mode = "words">words</button>
-          <button class="mode-btn" data-mode="quote">quote</button>
-          <button class="mode-btn" data-mode="language">language</button>
+          <div class="buttons-right">
+            <button>15</button>
+            <button>30</button>
+            <button>60</button>
+            <button>120</button>
+          </div>
         </div>
-
-        <div class="buttons-right">
-          <button>15</button>
-          <button>30</button>
-          <button>60</button>
-          <button>120</button>
-        </div>
-      </div>
-      <section id="typing-test">
-        <output id="timer">30</output>
-        <div class="words-window">
-          <div id="words-wrapper"></div>
-        </div>
-
-        <input type="text" id="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off"
-          spellcheck="false" />
-      </section>
-
-      <section id="result">
-        <dl>
-          <div>
-            <dt>WPM</dt>
-            <dd id="res-wpm">-</dd>
+        <section id="typing-test">
+          <output id="timer">30</output>
+          <div class="words-window">
+            <div id="words-wrapper"></div>
           </div>
-          <div>
-            <dt>Accuracy</dt>
-            <dd id="res-acc">-</dd>
-          </div>
-          <div>
-            <dt>Characters</dt>
-            <dd id="res-chars">-</dd>
-          </div>
-          <div>
-            <dt>Time</dt>
-            <dd id="res-time">-</dd>
-          </div>
-        </dl>
-      </section>
 
-    </main>
+          <input
+            type="text"
+            id="hidden-input"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+          />
+        </section>
 
-    <footer>
-      <p>press <kbd>Tab</kbd> to start</p>
-    </footer>
-  </div>
-  <script src="./js/main.js"></script>
-  <script src="./js/auth.js"></script>
-  <script src="./js/layout.js"></script>
-  <script src="./js/type.js"></script>
-  <script src="./js/setting-test.js"></script>
-</body>
+        <section id="result">
+          <dl>
+            <div>
+              <dt>WPM</dt>
+              <dd id="res-wpm">-</dd>
+            </div>
+            <div>
+              <dt>Accuracy</dt>
+              <dd id="res-acc">-</dd>
+            </div>
+            <div>
+              <dt>Characters</dt>
+              <dd id="res-chars">-</dd>
+            </div>
+            <div>
+              <dt>Time</dt>
+              <dd id="res-time">-</dd>
+            </div>
+          </dl>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <p>press <kbd>Tab</kbd> to start</p>
+      </footer>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/layout.js"></script>
+    <script src="./js/type.js"></script>
+    <script src="./js/setting-test.js"></script>
+  </body>
 </html>
