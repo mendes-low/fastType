@@ -1,17 +1,17 @@
 async function loadLeaderboard() {
-    const container = document.querySelector("#leaderboard-data");
+  const container = document.querySelector("#leaderboard-data");
 
-    try {
-        const response = await fetch(
-            "https://69b26ccae06ef68ddd950db6.mockapi.io/fasttypeApi",
-        );
-        const users = await response.json();
+  try {
+    const response = await fetch(
+      "https://69b26ccae06ef68ddd950db6.mockapi.io/fasttypeApi",
+    );
+    const users = await response.json();
 
-        container.innerHTML = "";
+    container.innerHTML = "";
 
-        users.sort((a, b) => b.wpm - a.wpm);
-        users.forEach((user, index) => {
-            const row = `
+    users.sort((a, b) => b.wpm - a.wpm);
+    users.forEach((user, index) => {
+      const row = `
       <div class="user-row">
           <span>${index + 1}</span>
           <span>${user.name}</span>
@@ -19,13 +19,11 @@ async function loadLeaderboard() {
           <span>${user.accuracy}%</span>
         </div>
         `;
-            container.innerHTML += row;
-        });
-    } catch (error) {
-        console.error('Error: ', error);
-    }
+      container.innerHTML += row;
+    });
+  } catch (error) {
+    console.error("Error: ", error);
+  }
 }
 
-loadLeaderboard()
-
-
+loadLeaderboard();
