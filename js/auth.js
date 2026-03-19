@@ -1,3 +1,5 @@
+
+
 const registerButton = document.querySelector("#register-button");
 const registerForm = document.querySelector("#registration-form");
 

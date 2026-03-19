@@ -17,18 +17,20 @@
   gap: 250px;
 }
 .regestration-bar form,
-.login-bar form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 20px;
+.login-bar form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    
 }
-.regestration-bar,
-.login-bar {
-  background-color: var(--bar);
-  padding: 10px;
-  width: 300px;
-  height: 390px;
+.regestration-bar ,
+.login-bar{
+    
+    background-color: var(--bar);
+    padding: 10px;
+    width: 300px;
+    height: 390px;
   border-radius: 10px;
 }
 .register-inputs {
@@ -85,9 +87,9 @@
   font-weight: bold;
   user-select: none;
   animation: floatUp 10s infinite linear;
-  animation-delay: var(--d);
+  animation-delay: var(--d); 
   transform: scale(var(--s)); 
-  pointer-events: none;
+   pointer-events: none;
   opacity: 0.15;
 }
 
