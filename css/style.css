@@ -187,6 +187,11 @@ main {
   background: var(--popup-hover);
 }
 
+#popup.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
 /* -----------POPUP-THEME-------- */
 
